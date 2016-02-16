@@ -1,1 +1,15 @@
 
+<h2>Restaurants have been added</h2>
+
+<ul>
+  #foreach ($restaurant in $restaurants)
+  <li>$restaurant.getName()</li>
+  #end
+</ul>
+
+<form action="/restaurants" method="post">
+  <label for="restaurantName"> Name of Restaurants</label>
+  <input id="restaurantName" name="restaurantName" type="text">
+
+  <button type="submit" class="btn btn-danger">Add restaurant</button>
+</form>
